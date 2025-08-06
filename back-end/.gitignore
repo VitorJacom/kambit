@@ -1,0 +1,34 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+dist/
+build/
+
+# Environment variables
+.env
+
+# Logs
+logs/
+*.log
+logs/**/*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor configs
+.vscode/
+.idea/
+
+# Optional: se estiver usando PM2
+pids/
+*.pid
+*.seed
+
+# Optional: MongoDB dump
+dump/
+
+# Optional: se usar cobertura de testes
+coverage/
