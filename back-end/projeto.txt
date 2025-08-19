@@ -1,3 +1,148 @@
+# Project Dump
+
+Gerado em: 2025-08-18T15:21:33-03:00
+Diretório raiz: /home/vitor/Documentos/projetos/kambit/back-end
+
+============================================================
+== ÁRVORE DO PROJETO (ignorando node_modules) ==
+============================================================
+.
+├── .env
+├── .gitignore
+├── package.json
+├── package-lock.json
+├── project_dump.txt
+├── src
+│   ├── app.ts
+│   ├── config.ts
+│   ├── middleware
+│   │   └── requireAuth.ts
+│   ├── models
+│   │   ├── Identity.ts
+│   │   └── User.ts
+│   ├── routes
+│   │   ├── auth.ts
+│   │   └── me.ts
+│   ├── server.ts
+│   ├── services
+│   │   ├── oauthProviders.ts
+│   │   ├── stateStore.ts
+│   │   └── token.ts
+│   └── types
+│       └── auth.ts
+└── tsconfig.json
+
+6 directories, 18 files
+
+============================================================
+== CONTEÚDOS DOS ARQUIVOS (ignorando node_modules) ==
+============================================================
+
+---------------------------
+FILE: ./.env
+PATH: /home/vitor/Documentos/projetos/kambit/back-end/.env
+SIZE: 577 bytes
+---------------------------
+PORT=3000
+MONGODB_URI=mongodb://localhost:27017/kambit
+
+# JWT
+JWT_SECRET=troque-por-um-segredo-muito-forte
+JWT_EXPIRES_IN=7d
+
+# GitHub OAuth App
+GITHUB_CLIENT_ID=...
+GITHUB_CLIENT_SECRET=...
+GITHUB_REDIRECT_URI=http://localhost:3000/auth/github/callback
+# Para GitHub App (user-to-server), a autorização tb usa client_id/secret do App
+
+# GitLab OAuth (gitlab.com; para self-hosted, ajuste host)
+GITLAB_CLIENT_ID=...
+GITLAB_CLIENT_SECRET=...
+GITLAB_REDIRECT_URI=http://localhost:3000/auth/gitlab/callback
+GITLAB_BASE_URL=https://gitlab.com
+# ou https://gitlab.seu-dominio.com
+
+
+---------------------------
+FILE: ./.gitignore
+PATH: /home/vitor/Documentos/projetos/kambit/back-end/.gitignore
+SIZE: 345 bytes
+---------------------------
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+dist/
+build/
+
+# Environment variables
+.env
+
+# Logs
+logs/
+*.log
+logs/**/*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor configs
+.vscode/
+.idea/
+
+# Optional: se estiver usando PM2
+pids/
+*.pid
+*.seed
+
+# Optional: MongoDB dump
+dump/
+
+# Optional: se usar cobertura de testes
+coverage/
+
+
+---------------------------
+FILE: ./package.json
+PATH: /home/vitor/Documentos/projetos/kambit/back-end/package.json
+SIZE: 613 bytes
+---------------------------
+{
+  "name": "back-end",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "dist/server.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "node --env-file=.env --watch --loader ts-node/esm src/server.ts",
+    "start": "node dist/server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.17.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/jsonwebtoken": "^9.0.6",
+    "@types/node": "^22.5.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
+  }
+}
+
+
+---------------------------
+FILE: ./package-lock.json
+PATH: /home/vitor/Documentos/projetos/kambit/back-end/package-lock.json
+SIZE: 56272 bytes
+---------------------------
 {
   "name": "back-end",
   "version": "1.0.0",
@@ -1539,3 +1684,10 @@
     }
   }
 }
+
+
+---------------------------
+FILE: ./project_dump.txt
+PATH: /home/vitor/Documentos/projetos/kambit/back-end/project_dump.txt
+SIZE: 59759 bytes
+---------------------------
