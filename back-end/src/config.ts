@@ -10,11 +10,14 @@ export const config = {
   },
 
   github: {
+    appId: process.env.GITHUB_APP_ID || "",
     clientId: process.env.GITHUB_CLIENT_ID || "",
     clientSecret: process.env.GITHUB_CLIENT_SECRET || "",
     redirectUri:
       process.env.GITHUB_REDIRECT_URI ||
       "http://localhost:3000/auth/github/callback",
+    privateKeyPem: process.env.GITHUB_PRIVATE_KEY_PEM || "",
+    webhookSecret: process.env.GITHUB_WEBHOOK_SECRET || "",
   },
 
   gitlab: {

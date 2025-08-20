@@ -32,3 +32,6 @@ dump/
 
 # Optional: se usar cobertura de testes
 coverage/
+
+dump-tree.sh
+project_dump.txt
